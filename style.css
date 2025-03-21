@@ -10,7 +10,7 @@ body {
 
 /* Sticky Navigation */
 header {
-    background-color: #2c3e50;
+    background-color: #1a1a2e; /* Dark blue */
     color: white;
     padding: 10px 20px;
     display: flex;
@@ -60,7 +60,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    background-color: #34495e;
+    background-color: #16213e; /* Darker blue */
     border-radius: 5px;
 }
 
@@ -68,7 +68,7 @@ header nav ul li a:hover {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #2c3e50;
+    background-color: #1a1a2e; /* Dark blue */
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1;
@@ -91,8 +91,8 @@ header nav ul li a:hover {
 /* Hero Section */
 .hero {
     position: relative;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #0f3460; /* Dark blue */
+    color: white;
     padding: 150px 20px;
     text-align: center;
     overflow: hidden;
@@ -142,7 +142,7 @@ header nav ul li a:hover {
 }
 
 .cta-button {
-    background-color: #e67e22;
+    background-color: #e94560; /* Red */
     color: white;
     padding: 12px 24px;
     border: none;
@@ -154,7 +154,7 @@ header nav ul li a:hover {
 }
 
 .cta-button:hover {
-    background-color: #d35400;
+    background-color: #d32f4a; /* Darker red */
 }
 
 /* About Us Section */
@@ -200,7 +200,7 @@ header nav ul li a:hover {
 .mission h3, .vision h3 {
     font-size: 24px;
     margin-bottom: 15px;
-    color: #2c3e50;
+    color: #1a1a2e; /* Dark blue */
 }
 
 .mission p, .vision p {
@@ -232,7 +232,7 @@ header nav ul li a:hover {
 .message-content h2 {
     font-size: 28px;
     margin-bottom: 15px;
-    color: #2c3e50;
+    color: #1a1a2e; /* Dark blue */
 }
 
 .message-content p {
@@ -260,7 +260,7 @@ header nav ul li a:hover {
 .product-category h3 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: #2c3e50;
+    color: #1a1a2e; /* Dark blue */
 }
 
 .product-scroll {
@@ -294,6 +294,43 @@ header nav ul li a:hover {
 .product-item p {
     font-size: 16px;
     margin-top: 10px;
+}
+
+/* Clients Section */
+.clients {
+    padding: 60px 20px;
+    background-color: #ecf0f1;
+    text-align: center;
+}
+
+.clients h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.client-logos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.client-logo {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.client-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
 }
 
 /* Contact Section */
@@ -345,7 +382,7 @@ header nav ul li a:hover {
 }
 
 .contact-form button {
-    background-color: #e67e22;
+    background-color: #e94560; /* Red */
     color: white;
     padding: 12px 20px;
     border: none;
@@ -356,7 +393,7 @@ header nav ul li a:hover {
 }
 
 .contact-form button:hover {
-    background-color: #d35400;
+    background-color: #d32f4a; /* Darker red */
 }
 
 /* Map Section */
@@ -372,7 +409,7 @@ header nav ul li a:hover {
 
 /* Footer */
 footer {
-    background-color: #2c3e50;
+    background-color: #1a1a2e; /* Dark blue */
     color: white;
     padding: 20px;
     text-align: center;
@@ -389,7 +426,7 @@ footer p {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #e67e22;
+    background-color: #e94560; /* Red */
     color: white;
     border: none;
     border-radius: 50%;
@@ -402,13 +439,24 @@ footer p {
 }
 
 .back-to-top:hover {
-    background-color: #d35400;
+    background-color: #d32f4a; /* Darker red */
 }
 
 /* Animations */
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Responsive Design */
@@ -441,5 +489,14 @@ footer p {
 
     .map {
         text-align: center;
+    }
+
+    .client-logos {
+        gap: 20px;
+    }
+
+    .client-logo {
+        width: 120px;
+        height: 120px;
     }
 }
